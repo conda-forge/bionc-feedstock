@@ -1,5 +1,5 @@
 {% set name = "bionc" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Ipuch/bioNC/archive/{{ version }}.tar.gz
-  sha256: 5bb58463c3dcc64cf55b49cd15161ecb359f049b3e62f4f31fb5d6bc17cd8eab
+  sha256: da59bb6710822ba650e5b64431f008a51b7ae2c871ebe87db044ba0201c9319b
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/Ipuch/bioNC
-  summary: 'Natural Coordinates with python for biomechanics'
+  summary: Natural Coordinates with python for biomechanics
   description: |
     This repository contains the source code for the bioNC library, a python package for biomechanics and natural coordinates formalism. Inverse and Forward approach are implemented.
   license: MIT
