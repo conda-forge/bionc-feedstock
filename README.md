@@ -1,11 +1,11 @@
-About bionc
-===========
+About bionc-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bionc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Ipuch/bioNC
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bionc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Natural Coordinates with python for biomechanics
 
