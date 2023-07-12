@@ -26,6 +26,9 @@ requirements:
     - casadi
     - ezc3d
     - plotly
+    - bioviz
+    - pyomeca
+    - dill
 
 test:
   imports:
