@@ -13,12 +13,6 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
 
 requirements:
   host:
@@ -36,6 +30,8 @@ requirements:
     - pyomeca
     - dill
     - biorbd
+    - mesa-libgl-devel-cos7-x86_64
+    
 
 test:
   imports:
