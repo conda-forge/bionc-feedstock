@@ -1,2 +1,8 @@
 xorg-x11-server-Xvfb
 libXtst
+mesa-libGL
+mesa-dri-drivers
+libselinux
+libXdamage
+libXxf86vm
+libXext
