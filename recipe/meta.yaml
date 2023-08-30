@@ -1,6 +1,5 @@
 {% set name = "bionc" %}
 {% set version = "0.7.0" %}
-{% build_num = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -11,18 +10,19 @@ source:
   sha256: 35fbe8e88321e7990a05ff15f7c10ad0260683748832afaa3dfa357c4b12e2b9
 
 build:
-  number: {{ build_num }}
-  string: py{{ py }}_h{{ PKG_HASH }}_{{ build_num }}
+  number: 0
+  string: py{{ py }}_h{{ PKG_HASH }}_0
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
 
 requirements:
+  build:
+    - python
   host:
-    - python >=3.10
+    - python
     - pip
   run:
-    - python >=3.10
+    - python
     - numpy
     - packaging
     - casadi
