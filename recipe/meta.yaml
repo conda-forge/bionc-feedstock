@@ -36,12 +36,13 @@ requirements:
     
 
 test:
+  commands:
+    - xvfb-run python -c "import biosiglive"  # [linux]
+    - pip check
   imports:
-    - bionc
+    - bionc  # [not linux]
   requires:
     - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/Ipuch/bioNC
