@@ -37,7 +37,7 @@ requirements:
 
 test:
   commands:
-    - xvfb-run python -c "import biosiglive"  # [linux]
+    - xvfb-run python -c "import bionc"  # [linux]
     - pip check
   imports:
     - bionc  # [not linux]
