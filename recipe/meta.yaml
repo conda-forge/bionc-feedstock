@@ -11,9 +11,8 @@ source:
 
 build:
   number: 0
-  string: py{{ py }}_h{{ PKG_HASH }}_0
-  skip: true  # [py<310]
-  script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
