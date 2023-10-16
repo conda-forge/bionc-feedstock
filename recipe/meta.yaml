@@ -1,5 +1,5 @@
 {% set name = "bionc" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,19 @@ package:
 
 source:
   url: https://github.com/Ipuch/bioNC/archive/{{ version }}.tar.gz
-  sha256: 82a218f5e1ba28d9ef3e0ba5b21d70fffd8387cb8987ae55288f91cbd2a3582e
+  sha256: 35fbe8e88321e7990a05ff15f7c10ad0260683748832afaa3dfa357c4b12e2b9
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.9
     - pip
   run:
-    - python >=3.10
-    - scipy
+    - python >=3.9
     - numpy
     - packaging
     - casadi
@@ -29,14 +28,18 @@ requirements:
     - bioviz
     - pyomeca
     - dill
+    - biorbd
+    - mesa-libgl-devel-cos7-x86_64
+    
 
 test:
+  commands:
+    - xvfb-run python -c "import bionc"  # [linux]
+    - pip check
   imports:
-    - bionc
+    - bionc  # [not linux]
   requires:
     - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/Ipuch/bioNC
