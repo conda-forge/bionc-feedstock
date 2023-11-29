@@ -1,5 +1,5 @@
 {% set name = "bionc" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/Ipuch/bioNC/archive/{{ version }}.tar.gz
-  sha256: 35fbe8e88321e7990a05ff15f7c10ad0260683748832afaa3dfa357c4b12e2b9
+  sha256: 39c89c1150adb25838064571c39a49a0e1a308cc671a91c2788502c66a2eac0f
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - dill
     - biorbd
     - mesa-libgl-devel-cos7-x86_64
-    
+
 
 test:
   commands:
