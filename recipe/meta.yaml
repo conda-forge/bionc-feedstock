@@ -29,6 +29,7 @@ requirements:
     - pyomeca
     - dill
     - biorbd
+    - pyorerun
     - mesa-libgl-devel-cos7-x86_64
 
 
