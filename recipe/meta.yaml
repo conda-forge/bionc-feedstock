@@ -10,16 +10,16 @@ source:
   sha256: 336295768c51f5a9df25d8bdc64147435d753b96d40a81f1f44e8d64b215394e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy
     - packaging
     - casadi
@@ -40,6 +40,7 @@ test:
     - bionc  # [not linux]
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Ipuch/bioNC
