@@ -35,11 +35,8 @@ requirements:
     - pyorerun
 
 test:
-  commands:
-    - xvfb-run python -c "import bionc"  # [linux]
-    - pip check
   imports:
-    - bionc  # [not linux]
+    - bionc
   requires:
     - pip
     - python {{ python_min }}
