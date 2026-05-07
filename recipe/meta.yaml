@@ -19,9 +19,9 @@ requirements:
   host:
     - pip
     - hatchling
-    - python >=${{ python_min }}
+    - python >={{ python_min }}
   run:
-    - python >=${{ python_min }}
+    - python >={{ python_min }}
     - numpy
     - packaging
     - casadi
