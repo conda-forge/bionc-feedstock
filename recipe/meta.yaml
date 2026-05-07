@@ -31,6 +31,7 @@ requirements:
     - pyomeca
     - dill
     - biorbd
+    - numba
     - pyorerun
 
 test:
