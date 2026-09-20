@@ -1,5 +1,5 @@
 {% set name = "bionc" %}
-{% set version = "0.12.0" %}
+{% set version = "0.12.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/Ipuch/bioNC/archive/{{ version }}.tar.gz
-  sha256: 9d7206db1df3351297feb0109d67e260a3c83ead62f6754070ab267c5ec1ea04
+  sha256: c0e843a37df52e78586f34c9a0a5fb16d3c1633969ac05b5cfc6e5d1ab932285
 
 build:
   number: 0
